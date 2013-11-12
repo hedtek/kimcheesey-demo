@@ -28,4 +28,5 @@ Kimcheesey::Application.configure do
   config.assets.debug = true  # Send email in development mode.
   config.action_mailer.perform_deliveries = true
 
+  config.middleware.use Rack::LiveReload
 end
