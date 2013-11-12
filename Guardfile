@@ -1,10 +1,5 @@
-# A sample Guardfile
-# More info at https://github.com/guard/guard#readme
-
 guard :bundler do
   watch('Gemfile')
-  # Uncomment next line if your Gemfile contains the `gemspec' command.
-  # watch(/^.+\.gemspec/)
 end
 
 guard 'rails' do
@@ -13,7 +8,7 @@ guard 'rails' do
 end
 
 
-guard :rspec do
+guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -42,4 +37,10 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
+end
+
+guard :bundler do
+  watch('Gemfile')
+  # Uncomment next line if your Gemfile contains the `gemspec' command.
+  # watch(/^.+\.gemspec/)
 end
