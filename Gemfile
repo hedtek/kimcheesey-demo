@@ -23,6 +23,7 @@ group :development do
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'guard-rake'
   gem 'guard-livereload'
   gem 'rack-livereload'
   gem 'quiet_assets'

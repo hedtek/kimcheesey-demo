@@ -7,6 +7,10 @@ guard 'rails' do
   watch(%r{^(config|lib)/.*})
 end
 
+# Run rake db:test:prepare whenever the db schema.rb file changes
+guard 'rake', :task => 'db:test:prepare' do
+  watch(%r{^db/schema.rb$})
+end
 
 guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/.+_spec\.rb$})
@@ -44,3 +48,4 @@ guard :bundler do
   # Uncomment next line if your Gemfile contains the `gemspec' command.
   # watch(/^.+\.gemspec/)
 end
+
