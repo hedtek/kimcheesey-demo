@@ -1,6 +1,6 @@
 #!/bin/bash
 bundle
-createuser kimcheesey -s
+createuser microblog -s
 if [[ ! -e config/database.yml ]]; then
   cp config/database.example.yml config/database.yml
 fi

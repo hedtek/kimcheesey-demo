@@ -16,9 +16,9 @@ development:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: kimcheesey_development
+  database: microblog_development
   pool:     5
-  username: kimcheesey
+  username: microblog
   password:
   template: template0
 
@@ -44,9 +44,9 @@ test:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: kimcheesey_test
+  database: microblog_test
   pool:     5
-  username: kimcheesey
+  username: microblog
   password:
   template: template0
 
@@ -54,8 +54,8 @@ production:
   adapter:  postgresql
   host:     localhost
   encoding: unicode
-  database: kimcheesey_production
+  database: microblog_production
   pool:     5
-  username: kimcheesey
+  username: microblog
   password:
   template: template0

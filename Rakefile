@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Kimcheesey::Application.load_tasks
+Microblog::Application.load_tasks
